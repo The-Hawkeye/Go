@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "/proto;mode";
+
+
+message ModeRequest {
+  string area_code = 1;
+  string mode = 2;
+}
+
+message ModeResponse {
+  map<string, int32> mode_counts = 1;
+}
